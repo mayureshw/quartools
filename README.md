@@ -18,7 +18,7 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     - export PATH=/opt/intelFPGA_lite/20.1/quartus/bin:/opt/intelFPGA_lite/20.1/modelsim_ase/bin:$PATH
 
-- Some quirks with Quartus installation that require manual intervention to the installation:
+- Some quirks with Quartus that require manual intervention to the installation:
 
     - The Quartus installation is not required to be in the same login where you do your development. Typically it may be installed as root. Just ensure that appropriate permissions are set. Unfortunately executables under modelsim_ase/bin have strange permissions when you install Quartus i.e. they are not executable by 'other'. You may have to correct them manually (or change the owner of those files).
 
@@ -32,7 +32,7 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     See examples/bsimu.
 
-    For your own programs, just set the SRCS and TOP variables. Both vhdl and verilog sources may be used together in one project and need to be specified in the same variable. vhdl sources must have .vhd extension and verilog sources must have .v extension.
+    For your own programs, just set the SRCS and TOP variables in the Makefile. Both vhdl and verilog sources may be used together in one project and need to be specified in the same variable. vhdl sources must have .vhd extension and verilog sources must have .v extension.
 
     Run 'make bsimu' to run the simulation
 
