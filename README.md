@@ -14,7 +14,7 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
 # Installation
 
-- Install Quartus Prime with ModelSim. Make sure that your environment has bin directories of both Quartus and ModelSim. For example, if your installation is in /opt, you may want to add something like following to your shell's rc file:
+- Install Quartus Prime with ModelSim. Make sure that your PATH environment variable has 'bin' directories of both Quartus and ModelSim. For example, if your installation is in /opt, you may want to add something like following to your shell's rc file:
 
     - export PATH=/opt/intelFPGA_lite/20.1/quartus/bin:/opt/intelFPGA_lite/20.1/modelsim_ase/bin:$PATH
 
