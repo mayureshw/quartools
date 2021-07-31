@@ -1,0 +1,17 @@
+# All paths are relative to current working directory
+
+WORKDIR = work
+
+CCDONE = $(addprefix $(WORKDIR)/, $(SRCS:=.ccdone))
+
+$(WORKDIR)/%.v.ccdone: %.v
+	vlog $< && touch $@
+
+$(WORKDIR)/%.vhd.ccdone: %.vhd
+	vcom $< && touch $@
+
+bsimu: $(CCDONE)
+	( echo vcd file; echo run ) | vsim -c $(TOP)
+
+clean:
+	rm -rf $(WORKDIR) transcript
