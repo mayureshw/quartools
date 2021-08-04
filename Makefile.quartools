@@ -13,5 +13,8 @@ $(WORKDIR)/%.vhd.ccdone: %.vhd
 bsimu: $(CCDONE)
 	( echo vcd file; echo run ) | vsim -c $(TOP)
 
+compile: $(CCDONE)
+	quartus_sh --flow compile $(TOP)
+
 clean:
 	rm -rf $(WORKDIR) transcript

@@ -40,6 +40,10 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     Use 'make clean' to get rid of the work area of ModelSim to reclaim space.
 
+1. Compilation
+
+    'make compile' would run flow 'compile' on the TOP module. Rest of the specification is similar to bsimu.
+
 # Wish list
 
 - More flows and configurable options to be added over time - typically in the form of more targets to the makefile. General structure of usage of the package is likely to remain same.
