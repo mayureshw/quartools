@@ -26,7 +26,9 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     - For ModelSim to work you may need to install package libxft2:i386 manually.
 
-- Check out quartools package in a suitable directory. Again, it is not required to be in the same login where you normally work. It's better to keep it under at least a different path from your work directories. Set the environment variable QUARTOOLSDIR pointing to the root directory of the package. For example, export QUARTOOLSDIR=$HOME/programs/quartools if the package was cloned in $HOME/programs.
+- Check out quartools package in a suitable directory. Again, it is not required to be in the same login where you normally work. It's better to keep it under at least a different path from your work directories. Set the environment variable QUARTOOLSDIR pointing to the root directory of the package. For example, if the package was cloned in $HOME/programs, you may want to add something like following to your shell's rc file:
+
+    - export QUARTOOLSDIR=$HOME/programs/quartools
 
 # Usage
 
