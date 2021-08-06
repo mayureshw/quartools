@@ -8,6 +8,8 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
 - Quartus Prime. The version used for development is Lite 20.1.1. It may possibly work on other versions.
 
+- gtkwave (or equivalent) is recommended for waverform (.vcd format) file visualization, if you want to view waverforms.
+
 - Unix like system with GNU make, gtkwave. Tested on Ubuntu 20.04.1, but should work on most Unix like systems that meet the software requirement.
 
 - Might work with Cygwin on Windows. But it has not been tested.
