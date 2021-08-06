@@ -38,7 +38,7 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     Use 'gtkwave dump.vcd' to view the waveforms.
 
-    Use 'make clean' to get rid of the work area of ModelSim to reclaim space. You may also like to do this if you have renamed or removed your sources that you may have already compiled, to expunge the compiled modules with old name from the work area.
+    Use 'make clean' to get rid of the work area to reclaim space. You may also like to do this if you have renamed or removed your sources that you may have already compiled, to expunge the compiled modules with old name from the work area.
 
 1. Compilation
 
