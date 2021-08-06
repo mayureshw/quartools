@@ -42,10 +42,11 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     'make compile' would run the Quartus' 'compile' flow on the TOP module. Rest of the specification is similar to bsimu. Different frameworks may have different notions of the term 'compile' in HDLs. This flow runs the flow literally named as compile in Quartus parlance, using Quartus shell interface.
 
+1. Clean the work area
+
+    Use 'make clean' to get rid of the work area to reclaim space. You may also like to do this if you have renamed or removed your sources that you may have already compiled, to expunge the compiled modules with old name from the work area.
+
 # Wish list
 
 - More flows and configurable options to be added over time - typically in the form of more targets to the makefile. General structure of usage of the package is likely to remain same.
 
-1. Clean the work area
-
-    Use 'make clean' to get rid of the work area to reclaim space. You may also like to do this if you have renamed or removed your sources that you may have already compiled, to expunge the compiled modules with old name from the work area.
