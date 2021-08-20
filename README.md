@@ -36,7 +36,7 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     See examples/bsimu.
 
-    For your own programs, just set the SRCS and TOP variables in the Makefile. Both vhdl and verilog sources may be used together in one project and need to be specified in the same variable. vhdl sources must have .vhd extension and verilog sources must have .v extension.
+    For your own programs, just set the SRCS and TOP variables in the Makefile. Both vhdl and verilog sources may be used together in one project and need to be specified in the same variable. vhdl sources must have .vhd or .vhdl extension and verilog sources must have .v extension.
 
     Run 'make bsimu' to run the simulation
 

@@ -10,6 +10,9 @@ $(WORKDIR)/%.v.ccdone: %.v
 $(WORKDIR)/%.vhd.ccdone: %.vhd
 	vcom $< && touch $@
 
+$(WORKDIR)/%.vhdl.ccdone: %.vhdl
+	vcom $< && touch $@
+
 bsimu: $(CCDONE)
 	( echo vcd file; echo run -all ) | vsim -c $(TOP)
 
