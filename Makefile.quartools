@@ -15,9 +15,12 @@ $(WORKDIR)/%.vhdl.ccdone: %.vhdl
 
 # Unclear how to get vsim to dump the waveforms in vhdl
 # works well in verilog using $dumpvars
-# Interatively one can say "add wave sim:/<mod>/*"
+# Till then we launch the interactive one
+# It does produce a wlf file which is convertible to vcd
+# However it does not contain all the variables
 bsimu: $(CCDONE)
-	( echo vcd file; echo run -all ) | vsim -c $(TOP)
+	#( echo vcd file; echo run -all ) | vsim -c $(TOP)
+	vsim -do "add wave *; run -all;" $(TOP)
 
 compile: $(CCDONE)
 	quartus_sh --flow compile $(TOP)
