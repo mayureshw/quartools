@@ -13,6 +13,9 @@ $(WORKDIR)/%.vhd.ccdone: %.vhd
 $(WORKDIR)/%.vhdl.ccdone: %.vhdl
 	vcom $< && touch $@
 
+# Unclear how to get vsim to dump the waveforms in vhdl
+# works well in verilog using $dumpvars
+# Interatively one can say "add wave sim:/<mod>/*"
 bsimu: $(CCDONE)
 	( echo vcd file; echo run -all ) | vsim -c $(TOP)
 
