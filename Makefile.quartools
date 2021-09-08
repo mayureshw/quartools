@@ -20,7 +20,12 @@ $(WORKDIR)/%.vhdl.ccdone: %.vhdl
 # However it does not contain all the variables
 bsimu: $(CCDONE)
 	#( echo vcd file; echo run -all ) | vsim -c $(TOP)
-	vsim -do "add wave *; run -all;" $(TOP)
+ifeq ($(LAUNCHSIM),Y)
+		vsim -do "add wave *; run -all;" $(TOP)
+else
+		vsim -c -do "run -all; quit -f" $(TOP)
+endif
+
 
 compile: $(CCDONE)
 	quartus_sh --flow compile $(TOP)
