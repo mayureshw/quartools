@@ -18,7 +18,7 @@ $(WORKDIR)/%.vhdl.ccdone: %.vhdl
 # Till then we launch the interactive one
 # It does produce a wlf file which is convertible to vcd
 # However it does not contain all the variables
-bsimu: $(CCDONE)
+bsimu: analyze
 	#( echo vcd file; echo run -all ) | vsim -c $(TOP)
 ifeq ($(LAUNCHSIM),Y)
 		vsim -do "add wave *; run -all;" $(TOP)
@@ -27,8 +27,10 @@ else
 endif
 
 
-compile: $(CCDONE)
+compile: analyze
 	quartus_sh --flow compile $(TOP)
+
+analyze: $(CCDONE)
 
 clean:
 	rm -rf $(WORKDIR) transcript

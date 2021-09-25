@@ -42,6 +42,10 @@ This is a work in progress to build a CLI interface around Quartus software for 
 
     Use 'gtkwave dump.vcd' to view the waveforms.
 
+1. Only analyze the code
+
+    Run 'make analyze'
+
 1. Launching modelsim simulator automatically
 
     In the Makefile set the following if you would like the simulator UI to come up automatically. If you have written a test bench, it would directly show you the waveforms of all the signals.
